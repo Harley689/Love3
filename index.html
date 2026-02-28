@@ -124,7 +124,7 @@ body {
   box-shadow:0 0 30px rgba(255,0,150,0.7);
 }
 
-/* ===== زر تشغيل الأغنية ===== */
+/* ===== زر تشغيل الأغنية 3D ===== */
 .music-btn-container {
   margin-top:50px;
   text-align: center;
@@ -174,7 +174,7 @@ body {
   box-shadow: 0 0 20px #ff4da6;
 }
 
-/* ===== لعبة الحظ ===== */
+/* ===== لعبة الحظ 2x2 ===== */
 #luckTitle{
   text-align:center;
   font-size:22px;
@@ -329,7 +329,7 @@ body {
 </head>
 <body>
 
-<!-- صفحة الدخول -->
+<!-- ===== صفحة الدخول ===== -->
 <div id="loginPage">
   <h1>💞 خش برجل اليمين قلبي</h1>
   <img src="heart.png" alt="قلب">
@@ -337,7 +337,7 @@ body {
   <button id="loginBtn">دخول</button>
 </div>
 
-<!-- الصفحة الرئيسية -->
+<!-- ===== الصفحة الرئيسية ===== -->
 <div id="mainPage">
 
   <!-- عداد الحب -->
@@ -373,9 +373,9 @@ body {
   <div id="luckTitle">🤗 لعبة حظ</div>
   <div class="cards-container">
     <div class="card" data-order="1"><div class="card-inner"><div class="card-front">1</div><div class="card-back">محبتش</div></div></div>
-    <div class="card" data-order="2"><div class="card-inner"><div class="card-front">2</div><div class="card-back">مبحبش</div></div></div>
-    <div class="card" data-order="3"><div class="card-inner"><div class="card-front">3</div><div class="card-back">في ولا هحب</div></div></div>
-    <div class="card" data-order="4"><div class="card-inner"><div class="card-front">4</div><div class="card-back">💗ولا هحب زيك انتي نور عيني</div></div></div>
+    <div class="card" data-order="2"><div class="card-inner"><div class="card-front">2</div><div class="card-back">ولا بحب</div></div></div>
+    <div class="card" data-order="3"><div class="card-inner"><div class="card-front">3</div><div class="card-back">ولا هحب</div></div></div>
+    <div class="card" data-order="4"><div class="card-inner"><div class="card-front">4</div><div class="card-back">💞 زيك انتي يا نور عيني</div></div></div>
   </div>
 
   <!-- الصور العمودية -->
@@ -389,13 +389,15 @@ body {
 
   <!-- الرسالة النهائية -->
   <div class="final-section">
-    <h2>🙋‍♂️ خدي خنا لسه مخلصناش</h2>
+    <h2>🙋‍♂️ خدي هنا لسه مخلصناش</h2>
     <button id="openFinal">دوسي هنا 🔒</button>
   </div>
+
   <div id="finalMessage">
     <p>💎 راح اجيب جمار والماس<br>🗣 وقول يعشق ف وسط الناس<br>💗 بحبك ي بنوتي</p>
     <button id="closeFinal">اغلاق</button>
   </div>
+
 </div>
 
 <script>
@@ -457,7 +459,7 @@ closeBtn.onclick = ()=>{
 playBtn.onclick = ()=> audio.play();
 pauseBtn.onclick = ()=> audio.pause();
 
-// ===== الكروت =====
+// ===== الكروت مع Flip effect + ترتيب إلزامي =====
 let currentOrder = 1;
 document.querySelectorAll(".card").forEach(card=>{
   card.onclick = ()=>{
@@ -480,4 +482,4 @@ openFinal.onclick = ()=> final.style.display="block";
 closeFinal.onclick = ()=> final.style.display="none";
 </script>
 </body>
-</html>
+    </html>
